@@ -1,6 +1,12 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.zhangkari'
+
+def USER = "zhangkari"
+def GROUP = "com.mpz.android.widget"
+def ARTIFACT = "textsurface"
+def VName = "1.1.0"
+def DESCRIPTION = "TextSurface animation"
+def URL = "https://github.com/zhangkari/TextSurface"
 
 android {
     compileSdkVersion 30
@@ -17,6 +23,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    publish {
+        userOrg = USER
+        groupId = GROUP
+        artifactId = ARTIFACT
+        publishVersion = VName
+        desc = DESCRIPTION
+        website = URL
     }
 }
 
